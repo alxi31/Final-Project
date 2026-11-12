@@ -1,0 +1,177 @@
+/* ---------- 1. THEME ---------- */
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --primary-soft: #dbeafe;
+    --background: #f1f5f9;
+    --card: #ffffff;
+    --text: #1e293b;
+    --muted: #64748b;
+    --border: #cbd5e1;
+    --danger: #dc2626;
+    --success: #15803d;
+    --radius: 12px;
+    --shadow: 0 4px 14px rgba(15, 23, 42, 0.10);
+}
+
+/* ---------- 2. BASE ---------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    color-scheme: light;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    color: var(--text);
+    background: var(--background);
+    line-height: 1.6;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+input::placeholder {
+    color: #94a3b8;
+}
+
+input:focus-visible,
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid rgba(37, 99, 235, 0.25);
+    outline-offset: 2px;
+}
+
+/* ---------- 3. CALCULATOR HEADER ---------- */
+body {
+    padding-bottom: 32px;
+}
+
+body > h1 {
+    width: 100%;
+    padding: 38px 100px 62px;
+    color: #ffffff;
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    text-align: center;
+    font-size: 2.1rem;
+    line-height: 1.25;
+}
+
+#logoutButton {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    padding: 9px 16px;
+    color: var(--primary-dark);
+    background: #ffffff;
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+#logoutButton:hover {
+    background: var(--primary-soft);
+}
+
+/* ---------- 4. CALCULATOR FORM ---------- */
+form {
+    width: calc(100% - 32px);
+    max-width: 560px;
+    margin: -24px auto 0;
+    padding: 24px;
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 11px 12px;
+    margin-bottom: 18px;
+    color: var(--text);
+    background: #ffffff;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    color: #ffffff;
+    background: var(--primary);
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+input[type="submit"]:hover {
+    background: var(--primary-dark);
+}
+
+/* ---------- 5. RESULT AND FOOTER ---------- */
+#result {
+    width: calc(100% - 32px);
+    max-width: 560px;
+    margin: 20px auto 0;
+    padding: 15px 18px;
+    background: var(--card);
+    border-left: 5px solid var(--primary);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    font-weight: 700;
+}
+
+#result:empty {
+    display: none;
+}
+
+.footer {
+    width: 100%;
+    margin-top: 32px;
+    padding: 18px 16px;
+    color: var(--muted);
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+    body > h1 {
+        padding: 70px 16px 54px;
+        font-size: 1.7rem;
+    }
+
+    #logoutButton {
+        top: 16px;
+        right: 16px;
+        padding: 8px 13px;
+    }
+
+    form {
+        padding: 20px;
+    }
+}

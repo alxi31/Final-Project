@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="website.css">
+</head>
+<body>
+    <h1>Growhrate Calculator</h1>
+      <button type="button" id="logoutButton">
+            Logout
+        </button>
+<form action="" method="post" onsubmit="growthRate(); return false;">
+        <label for="number">births:</label>
+        <input type="text" id="number" name="number"
+        placeholder="Enter the number of births">
+        <br>
+        <label for="number2">deaths</label>
+        <input type="text" id="number2" name="number2"
+        placeholder="Enter the number of deaths">
+        <br>
+        <label for="number3">immigrants</label>
+        <input type="text" id="number3" name="number3"
+        placeholder="Enter the number of immigrants">
+        <br>
+        <label for="number4">emigrants</label>
+        <input type="text" id="number4" name="number4"
+        placeholder="Enter the number of emigrants">
+        <br>
+        <label for="number5">population</label>
+        <input type="text" id="number5" name="number5"
+        placeholder="Enter the number of population">
+        <input type="submit" value="Submit">
+    </form>
+
+    <footer class="footer">
+        © Copyright by refaldi and mikhail 2026 for uuk preparation task
+    </footer>
+     <script src="website.js"></script>
+    <p id="result"></p>
+</body>
+
+</html>
